@@ -1,0 +1,41 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="countdown people-body" id="js-countdown">
+
+  <div class="countdown__item countdown__item--large">
+    <div class="countdown__timer js-countdown-days" id="days">
+      
+    </div>
+    
+    <div class="countdown__label" id="day-countdown">Days until launch</div>
+  </div>
+  
+  <div class="countdown__item">
+    <div class="countdown__timer js-countdown-hours" id="hours">
+      
+    </div>
+    
+    <div class="countdown__label" id="hour-countdown">Hours</div>
+  </div>
+  
+  <div class="countdown__item">
+    <div class="countdown__timer js-countdown-minutes" id="minutes">
+      
+    </div>
+    
+    <div class="countdown__label" id="minute-countdown">Minutes</div>
+  </div>
+  
+  <div class="countdown__item">
+    <div class="countdown__timer js-countdown-seconds" id="seconds">
+      
+    </div>
+    
+    <div class="countdown__label" id="second-countdown">Seconds</div>
+  </div>
+
+  <p style="text-transform: lowercase; font-size: 0.5em;">if you want this page to become available as soon as possible, make sure to share with your friends. <br> or, you can buy me a starbucks as motivation. your choice. </p>
+</div>
+{% endblock content %}

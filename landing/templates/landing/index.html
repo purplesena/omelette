@@ -1,0 +1,31 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-10 col-sm-12 text-center">
+            <img class="img-responsive" src="{% static 'images/girlface2.jpg' %}">
+            <h1 class="display-2">welcome!</h1>
+            <p class="mt-3 lead">if you're here, that means you're extremely single and desperate. but never fear, omelette is here!</p>
+            <p class="mt-3 lead">cette application vous permettra de rencontrer des gens en recherche d'amour à Rochambeau. </p>
+            {% if user.is_authenticated %}
+            <div class="d-flex justify-content-center mt-5">
+                <a href="{% url 'people' %}" class="btn btn-dark">start dating!</a> 
+            </div>
+            {% else %}
+            <div class="d-flex justify-content-center mt-5">
+                <a href="{% url 'account_login' %}" class="btn btn-light mr-2">log in</a> 
+                <br>
+                <a href="{% url 'account_signup' %}" class="btn btn-dark">register</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<footer class="footer mt-auto py-3 fixed-bottom justify-content-center" style="background-color:  #d99679;">
+    <div class="container">
+        <span class="text-muted justify-content-center"> enjoying this app? why don't you support the developer at <a href="https://sunnysidestudio.webflow.io/">sunnysidestudios.com</a></span>
+    </div>
+</footer>
+{% endblock content %}
