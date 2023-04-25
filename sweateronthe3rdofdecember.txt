@@ -1,0 +1,49 @@
+!! NOTES !!
+
+python -m django startproject projectname
+
+## HOME - NOT LOGGED IN 
+
+## HOME - LOGGED IN 
+
+## LOGIN
+
+## SIGNUP
+
+## PROFILES
+	grid with one column - profiles should be viewport height 
+
+	profile layout
+		--> each picture is a square - 2 and then 2 under
+		--> age is displayed to the left side 
+		--> bio paragraph
+		--> physical description paragraph
+		--> center aligned - big heart & big X
+
+	functionality 
+		--> list of profiles is filtered based on user's preferred gender AND if a profile == is_disliked, it will be excluded from the list 
+		** if user.pref_gen == male
+			for profile in profiles 
+				if profile.gender == male && profile != is_disliked
+				display the profile **
+				
+		--> when an user "likes" a profile, the mechanism is the same as following them
+		each profile included "likers" ( every user who liked their profile ) 
+		** for profile in profiles
+			if request.user in profile.likers AND profile.user in user.likers
+				insert profile
+			endif
+		   endfor **
+
+		--> when a user "dislikes" a profile, the profile is added to the "dislikes" array 
+
+## PERSONAL PROFILE
+
+## EDIT PROFILE
+
+	basic form
+
+## CONTACT 
+
+## PRIVATE MESSAGES (in progress)
+
